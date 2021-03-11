@@ -9,7 +9,11 @@ int main() {
   std::string fractional;
   std::cout << "Enter the number after the decimal point: \n";
   std::cin >> fractional;
-  double result = std::stod(whole) +
-      std::stod(fractional) / pow(10, fractional.length());
+
+  whole += '.' + fractional;
+  
+  double result = std::stod(whole);
+
   std::cout << "Result = " << result;
+
 }
